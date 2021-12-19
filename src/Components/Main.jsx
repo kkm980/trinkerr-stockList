@@ -57,7 +57,7 @@ function Main() {
 
 
 
-   // before adding to the currArr, each data will be checked with its id if it is already present in currArr or not
+//   in suggestion box, to show delete button or add button for each stock name, we have to find if user has already added a particular stock or not
     const verifyOnce=(id)=>{
         for (let i=0;i<currArr.length;i++){
             if (id===currArr[i][0][0]){return false}
@@ -72,20 +72,15 @@ function Main() {
         let bool = false;
 
         const val = ourArr.filter((e)=>{
-            if (e[0] === id && verifyOnce(id) === true){   
+            // if (e[0] === id && verifyOnce(id) === true){   
                 bool = true;
-                // console.log(e);
-                return e;
-            }
+            //     // console.log(e);
+                return e[0]===id;
+            // }
         })
 
         if(bool===true){
             setCurrArr([...currArr, val]);
-            return;
-
-        }
-        else{
-            alert("Check your list, already there...");
             return;
         }
 
