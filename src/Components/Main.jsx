@@ -100,7 +100,8 @@ function Main() {
     return (
         <div className="_wrapper">
             <div className="_searchBox">
-                <input type="text"  placeholder="Type stock name" className="_input" value={searchVal} onChange={(e)=>{setSearchVal(e.target.value)}}/>
+                <input type="search"  placeholder="Type stock name" className="_input" value={searchVal} onChange={(e)=>{setSearchVal(e.target.value)}}/>
+                
             </div>
 
             {bool?currArr.length <= 0 ? <div className="_addStocks"><h1>Please add some stocks first</h1></div> : <>
