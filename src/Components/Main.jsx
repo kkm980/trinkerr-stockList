@@ -114,18 +114,18 @@ function Main() {
                             <h2>Gaurav</h2>
                             <div style={{display:"flex", flexDirection:"row"}}>
                                 <p cursor="pointer" onClick={()=>{
-                                    
+
                                     // sorting function 
 
                                     let pramp=currArr.sort((a,b)=>{return a[0][2]-b[0][2]});
                                     setCurrArr(pramp);
                                     setSort(!sort);
-                                }}>Price <MdArrowDropUp color="blue" size="20px"/></p>
+                                }}>Sort by: Price Up<MdArrowDropUp color="blue" size="20px"/></p>
                                 <p cursor="pointer" onClick={()=>{
                                     let pramp=currArr.sort((a,b)=>{return b[0][2]-a[0][2]});
                                     setCurrArr(pramp);
                                     setSort(!sort);
-                                }}>Price <MdArrowDropDown  color="red" size="20px"/></p>
+                                }}>Price Down<MdArrowDropDown  color="red" size="20px"/></p>
                                 <AiOutlineEdit size="45px" className="_img" alt="Edit" />
                                 <AiOutlineDelete color="red" size="45px" className="_img" alt="Edit" />
                                 
